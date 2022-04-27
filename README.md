@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution repository](https://github.com/EdisonPadilla/FAQ-accordion-card.git)
-- Live Site URL: [live site](https://edisonpadilla.github.io/interactive-rating-component/)
+- Live Site URL: [live site](https://edisonpadilla.github.io/FAQ-accordion-card/)
 
 ## My process
 
