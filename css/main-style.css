@@ -1,0 +1,270 @@
+:root {
+  /* ## Colors
+    ### Primary
+    #### Text */
+
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* #### Gradient
+    Background gradient: */
+
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* ### Neutral */
+  /* #### Text */
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* #### Dividers */
+
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  color: var(--very-dark-grayish-blue);
+}
+
+main {
+  height: 124vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background-image: linear-gradient(
+    to bottom,
+    #af67e9,
+    #9f67e9,
+    #8d66e9,
+    #7a66e8,
+    #6565e7
+  );
+}
+
+.card-container {
+  position: relative;
+  padding: 112px 5% 36px 5%;
+  width: 90%;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.image-woman-box {
+  position: absolute;
+  top: -116px;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.image-woman {
+  width: 258px;
+  height: 196px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/illustration-woman-online-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pattern-mobile-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.pattern-mobile {
+  width: 258px;
+  height: 112px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-box {
+  display: none;
+}
+
+.menu-container .title {
+  text-align: center;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.menu .option {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.option-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition-duration: 300ms;
+  transition-property: all;
+}
+
+.option-link.active {
+  font-weight: 700;
+}
+
+.option-link:hover {
+  color: var(--soft-red);
+}
+
+.arrow {
+  color: var(--soft-red);
+  transition-duration: 350ms;
+  transition-property: all;
+}
+
+.arrow.rotate-arrow {
+  transform: rotate(180deg);
+}
+
+.content {
+  height: 0;
+  color: var(--dark-grayish-blue);
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 350ms;
+  transition-property: all;
+}
+
+.content li {
+  padding-top: 8px;
+  padding-right: 12px;
+}
+
+.attribution {
+  margin: 16px 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--dark-grayish-blue);
+}
+
+.attribution a {
+  padding-bottom: 0.4em;
+  color: var(--very-dark-desaturated-blue);
+  border-bottom: solid 2px transparent;
+  transition-duration: 0.5s;
+}
+
+.attribution a:hover {
+  color: var(--soft-blue);
+  border-color: var(--soft-blue);
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 100vh;
+  }
+
+  .card-container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    height: 100vh;
+  }
+
+  .card-container {
+    padding: 0;
+    width: 896px;
+    height: 464px;
+  }
+
+  .menu-container {
+    margin-left: 50%;
+    padding-right: 60px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-woman-box {
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .image-woman {
+    position: absolute;
+    top: 52px;
+    left: -84px;
+    width: 472px;
+    height: 360px;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: url(../images/illustration-woman-online-desktop.svg);
+  }
+
+  .pattern-mobile-box {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .pattern-mobile {
+    position: absolute;
+    left: -84px;
+    width: 472px;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: url(../images/bg-pattern-desktop.svg);
+  }
+
+  .image-box {
+    position: absolute;
+    top: 186px;
+    left: -96px;
+    width: 192px;
+    height: 184px;
+    display: initial;
+    z-index: 20;
+  }
+
+  .menu-container .title {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .menu .option {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
